@@ -69,7 +69,7 @@ jobs:
         ../$DIY_SH	
         make defconfig	
     - name: SSH connection to Actions	
-     uses: P3TERX/debugger-action@master	
+      uses: P3TERX/debugger-action@master	
 
     - name: Download package	
       run: |	
