@@ -24,7 +24,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-18.04
-
+    
+   run: echo "Deleting files, please wait ..."
+   run: sudo rm -rf /usr/share/dotnet /etc/apt/sources.list.d/*
+   run: sudo swapoff /swapfile
+   run: sudo rm -f /swapfile
    run: sudo apt-get update
    
    run: sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler
